@@ -65,9 +65,18 @@ while True:
                     print("Usage: md [path/to/directory] or [/path/to/directory]")
             elif command[0] == "rd":
                 try:
-                    os.rmdir(workdir + "/" + command[1])
+                    if command[1][0] == "/":
+                        if os.path.exists(command[1]) == True:
+                            os.removedirs(command[1])
+                        else:
+                            print("ERROR: Directory is't exists")
+                    else:
+                        if os.path.exists(workdir + "/" + command[1]) == True:
+                            os.removedirs(workdir + "/" + command[1])
+                        else:
+                            print("ERROR: Directory is't exists")
                 except:
-                    print("Errno 2: No such file or directory")
+                    print("ERROR: Directory is't empty or usage: rd [path/to/directory] or [/path/to/directory]")
             elif command[0] == "python":
                 credits()
             elif command[0] == "python_commands":
