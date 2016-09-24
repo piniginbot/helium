@@ -57,9 +57,12 @@ while True:
                     print("Hello, World!")
             elif command[0] == "md":
                 try:
-                    os.mkdir(workdir + "/" + command[1])
+                    if command[1][0] == "/":
+                        os.makedirs(command[1])
+                    else:
+                        os.makedirs(workdir + "/" + command[1])
                 except:
-                    print("Errno 2: No such file or directory")
+                    print("Usage: md [path/to/directory] or [/path/to/directory]")
             elif command[0] == "rd":
                 try:
                     os.rmdir(workdir + "/" + command[1])
