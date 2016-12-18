@@ -1,6 +1,5 @@
 #!/bin/bash
-cd /usr/bin
 echo "Pinos 0. Lic: ISC. Author: Maksim Pinigin. Pre-alpha 21.08.16b"
 echo "Starting Pinos..."
-python3 core.py
+python3 /usr/bin/core.py
 exit && exit
