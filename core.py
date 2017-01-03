@@ -88,7 +88,7 @@ while True:
                 print('88"""  88 88 Y88 Yb   dP o.`Y8b     Yb   dP')
                 print('88     88 88  Y8  YbodP  8bodP      YbodP')
                 print('')
-                print("Pinos 0 Pre-alpha 21.08.16")
+                print("Pinos 0 Pre-alpha 21.08.16b")
                 print('')
             elif command[0] == "array":
                 print(command[1:])
