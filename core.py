@@ -174,27 +174,12 @@ while True:
                         #print("Get kernel version...")
                         os.system("uname -mrs")
                         while True:
-                            cmd = input(username + " $ ")
+                            cmd = input(login + " $ ")
                             if cmd == "exit":
                                 break;
                             else:
                                 os.system(cmd)
                     # ===
-                    # === LinuxCMD ===
-
-                    # WTF?!?!?!?
-                    #elif command[1] == "linuxcmd":
-                    #    print("Get username...")
-                    #    username = os.getlogin()
-                    #    print("Get kernel version...")
-                    #    os.system("uname -mrs")
-                    #    while True:
-                    #        cmd = input(username + " $ ")
-                    #        if cmd == "exit":
-                    #            break;
-                    #        else:
-                    #            os.system(cmd)
-                    #    # ===
                     else:
                         print("Module is not found.")
                 except:
