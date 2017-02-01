@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 #
-# === Licensia: ===
-# === GNU GPL v3 ===
-# === Odnako, copyright (c) byMaximP ===
+# === License: ===
+# === ISC ===
+# === Copyright (c) 2016, Maksim Pinigin <pinigin_official@mail.ru> ===
 #
 
 # -*- coding: utf-8 -*-
