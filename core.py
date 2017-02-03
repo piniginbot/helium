@@ -104,7 +104,7 @@ while True:
                         while True:
                             primer = input("Math> ")
                             if primer == "exit":
-                                break;
+                                break
                             elif primer == "+":
                                 one = int(input("One: "))
                                 two = int(input("Two: "))
@@ -144,7 +144,7 @@ while True:
                         while True:
                             cmd = input(login + " $ ")
                             if cmd == "exit":
-                                break;
+                                break
                             else:
                                 os.system(cmd)
                     # ===
@@ -159,7 +159,7 @@ while True:
                     textmath = input("Math> ")
                     commandmath = textmath.split(' ')
                     if commandmath[0] == "exit":
-                        break;
+                        break
                     try:
                         if commandmath[1] == "+":
                             one = int(commandmath[0])
