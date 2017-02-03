@@ -198,27 +198,7 @@ while True:
                         print("Error. Maybe, directory is not exists?")
                 except:
                     print("Usage: cd [/path/to/directory]")
-            elif command[0] == "ls":
-                try:
-                    ls = os.listdir(command[1])
-                    for row in ls:
-                        for elem in row:
-                            print(elem, end='')
-                        print()
-                except:
-                    try:
-                        ls = os.listdir(workdir)
-                        for row in ls:
-                            for elem in row:
-                                print(elem, end='')
-                            print()
-                    except:
-                        ls = os.listdir("/")
-                        for row in ls:
-                            for elem in row:
-                                print(elem, end='')
-                            print()
-            elif command[0] == "dir":
+            elif command[0] == "dir" or command[0] == "ls":
                 try:
                     ls = os.listdir(command[1])
                     for row in ls:
