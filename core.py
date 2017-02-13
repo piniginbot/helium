@@ -260,12 +260,6 @@ while True:
                         print("Errno 2: No such file or directory")
                 except:
                     print("Undefined error")
-            elif command[0] == "mf":
-                try:
-                    f = open(workdir + "/" + command[1], 'w')
-                    f.close()
-                except:
-                    print("Errno 2: No such file or directory")
             elif command[0] == "getlogin":
                 print(login)
             elif command[0] == "iwf":
