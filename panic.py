@@ -5,5 +5,5 @@ import time
 def panic(reason):
 	print("")
 	print("Pinos Panic: " + reason)
-	time.sleep(10);
+	time.sleep(10)
 	exit()
