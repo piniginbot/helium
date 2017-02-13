@@ -278,7 +278,7 @@ while True:
                         print(writedt + " >> " + filename)
                 except:
                     print("Errno 2: No such file or directory")
-            elif command[0] == "renf":
+            elif command[0] == "mf":
                 try:
                     sourcefile = command[1]
                     newfile = command[2]
