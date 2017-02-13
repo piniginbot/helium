@@ -12,6 +12,7 @@ import os
 import math
 import datetime
 import time
+import panic
 
 # === Variables ===
 global text
@@ -301,6 +302,8 @@ while True:
                         #print(writedt + ' ==> ' + filename)
                 except:
                     print("Errno 2: No such file or directory")
+            elif command[0] == "panictest":
+                panic.panic("this is just test, lol")
             elif command[0] == "exit":
                 print("Goodbye!")
                 exit()
