@@ -85,7 +85,7 @@ while True:
                 else:
                     print("USAGE: rd [path/to/directory]")
             elif command[0] == "python":
-                credits()
+                copyright()
             elif command[0] == "python_commands":
                 help()
             elif command[0] == "pinos":
