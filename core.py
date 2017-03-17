@@ -261,14 +261,17 @@ while True:
                 else:
                     print("USAGE: vf [path/to/file]")
             elif command[0] == "rf":
-                try:
-                    filename = command[1]
-                    if os.path.exists(workdir + "/" + filename):
-                        os.remove(workdir + "/" + filename)
+                if len(command) == 2:
+                    if command[1][0] == "/":
+                        file_to_delete = command[1]
                     else:
-                        print("Errno 2: No such file or directory")
-                except:
-                    print("Undefined error")
+                        file_to_delete = workdir + "/" + command[1]
+                    try:
+                        os.remove(file_to_delete)
+                    except:
+                        print("ERROR: File is't exists or access denied")
+                else:
+                    print("USAGE: rf [path/to/file]")
             elif command[0] == "getlogin":
                 print(login)
             elif command[0] == "iwf":
