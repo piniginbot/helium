@@ -313,6 +313,9 @@ while True:
                         #print(writedt + ' ==> ' + filename)
                 except:
                     print("Errno 2: No such file or directory")
+            elif text[0] == "!":
+                execute_text = text.replace('!', '')
+                os.system(execute_text)
             elif command[0] == "exit":
                 print("Goodbye!")
                 exit()
