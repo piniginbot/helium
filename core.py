@@ -57,13 +57,16 @@ while True:
                 except:
                     print("Hello, World!")
             elif command[0] == "md":
-                try:
-                    if command[1][0] == "/":
-                        os.makedirs(command[1])
-                    else:
-                        os.makedirs(workdir + "/" + command[1])
-                except:
-                    print("Usage: md [path/to/directory] or [/path/to/directory]")
+                if len(command) == 2:
+                    try:
+                        if command[1][0] == "/":
+                            os.makedirs(command[1])
+                        else:
+                            os.makedirs(workdir + "/" + command[1])
+                    except:
+                        print("ERROR: Access denied")
+                else:
+                    print("USAGE: md [path/to/directory]")
             elif command[0] == "rd":
                 if len(command) == 2:
                     try:
