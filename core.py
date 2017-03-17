@@ -139,21 +139,6 @@ while True:
                             else:
                                 print("Unknown command")
                     # ==='''
-                    # === LinuxCMD ===
-                    if command[1] == "linuxcmd":
-                        print("Get username...")
-                        try:
-                            login = os.getlogin()
-                        except:
-                            login = "user"
-                        #print("Get kernel version...")
-                        os.system("uname -mrs")
-                        while True:
-                            cmd = input(login + " $ ")
-                            if cmd == "exit":
-                                break
-                            else:
-                                os.system(cmd)
                     # ===
                     else:
                         print("Module is not found.")
