@@ -247,17 +247,19 @@ while True:
             #    except:
             #        print("Error. Maybe, file(or directory?) is not exists?")
             elif command[0] == "vf":
-                try:
+                if len(command) == 2:
+                    if command[1][0] == "/":
+                        file_to_open = command[1]
+                    else:
+                        file_to_open = workdir + "/" + command[1]
                     try:
-                        f = open(workdir + "/" + command[1], 'r')
+                        f = open(file_to_open, 'r')
                         readed = f.read()
                         print(readed)
                     except:
-                        f = open(command[1], 'r')
-                        readed = f.read()
-                        print(readed)
-                except:
-                    print("Error. Maybe, file is not exists?")
+                        print("ERROR: File is't exists or access denied")
+                else:
+                    print("USAGE: vf [path/to/file]")
             elif command[0] == "rf":
                 try:
                     filename = command[1]
