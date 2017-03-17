@@ -71,12 +71,12 @@ while True:
                             if os.path.exists(command[1]) == True:
                                 os.removedirs(command[1])
                             else:
-                                print("ERROR: Directory is't exists")
+                                print("ERROR: Directory is't exists or access denied")
                         else:
                             if os.path.exists(workdir + "/" + command[1]) == True:
                                 os.removedirs(workdir + "/" + command[1])
                             else:
-                                print("ERROR: Directory is't exists")
+                                print("ERROR: Directory is't exists or access denied")
                     except:
                         print("ERROR: Directory is't empty")
                 else:
