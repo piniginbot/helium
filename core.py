@@ -52,9 +52,9 @@ while True:
             command = text.split(' ') # SCS
 
             if command[0] == "hello":
-                try:
+                if len(command) == 2:
                     print("Hello, " + command[1] + "!")
-                except:
+                else:
                     print("Hello, World!")
             elif command[0] == "md":
                 if len(command) == 2:
