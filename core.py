@@ -105,9 +105,10 @@ while True:
             elif command[0] == "omod":
                 # === Math ===
                 try:
-                    '''if command[1] == "math":
+                    if command[1] == "oldmath": # from 2016
                         global primer
-                        print("Math for Pinos by Maxim Pinigin. License GNU GPL")
+                        print("Math for Pinos by Maxim Pinigin. License ISC")
+                        print("Copyright (c) 2016, Maksim Pinigin <maksim@pinig.in>")
                         while True:
                             primer = input("Math> ")
                             if primer == "exit":
@@ -138,7 +139,7 @@ while True:
                                 print("+ or - or / or * or pi")
                             else:
                                 print("Unknown command")
-                    # ==='''
+                    # ===
                     # ===
                     else:
                         print("Module is not found.")
