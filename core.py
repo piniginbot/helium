@@ -65,19 +65,22 @@ while True:
                 except:
                     print("Usage: md [path/to/directory] or [/path/to/directory]")
             elif command[0] == "rd":
-                try:
-                    if command[1][0] == "/":
-                        if os.path.exists(command[1]) == True:
-                            os.removedirs(command[1])
+                if len(command) == 2:
+                    try:
+                        if command[1][0] == "/":
+                            if os.path.exists(command[1]) == True:
+                                os.removedirs(command[1])
+                            else:
+                                print("ERROR: Directory is't exists")
                         else:
-                            print("ERROR: Directory is't exists")
-                    else:
-                        if os.path.exists(workdir + "/" + command[1]) == True:
-                            os.removedirs(workdir + "/" + command[1])
-                        else:
-                            print("ERROR: Directory is't exists")
-                except:
-                    print("ERROR: Directory is't empty or usage: rd [path/to/directory] or [/path/to/directory]")
+                            if os.path.exists(workdir + "/" + command[1]) == True:
+                                os.removedirs(workdir + "/" + command[1])
+                            else:
+                                print("ERROR: Directory is't exists")
+                    except:
+                        print("ERROR: Directory is't empty")
+                else:
+                    print("USAGE: rd [path/to/directory]")
             elif command[0] == "python":
                 credits()
             elif command[0] == "python_commands":
