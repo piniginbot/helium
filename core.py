@@ -280,12 +280,21 @@ while True:
                 except:
                     print("Errno 2: No such file or directory")
             elif command[0] == "mf":
-                try:
-                    sourcefile = command[1]
-                    newfile = command[2]
-                    os.rename(workdir + "/" + sourcefile,workdir + "/" + newfile)
-                except:
-                    print("Error. Maybe, file(or directory?) is not exists?")
+                if len(command) == 3:
+                    if command[1][0] == "/":
+                        file_to_move = command[1]
+                    else:
+                        file_to_move = workdir + "/" + command[1]
+                    if command[2][0] == "/":
+                        new_name = command[2]
+                    else:
+                        new_name = workdir + "/" + command[2]
+                    try:
+                        os.rename(file_to_move, new_name)
+                    except:
+                        print("ERROR: File is't exists or access denied")
+                else:
+                    print("USAGE: mf [old/path] [new/path]")
             elif command[0] == "wf":
                 try:
                     filename = command[1]
