@@ -66,7 +66,7 @@ while True:
                         else:
                             os.makedirs(workdir + "/" + command[1])
                     except:
-                        print("ERROR: Access denied")
+                        print("ERROR: Direcotry exists or access denied")
                 else:
                     print("USAGE: md [path/to/directory]")
             elif command[0] == "rd":
