@@ -34,8 +34,6 @@ try:
 except:
     login = "user"
 
-print("Copyright (c) 2016-2017, Maksim Pinigin <maksim@pinig.in>")
-
 # === Shell ===
 while True:
 
