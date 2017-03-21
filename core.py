@@ -278,21 +278,31 @@ while True:
                 else:
                     print("USAGE: mf [old/path] [new/path]")
             elif command[0] == "wf":
-                try:
-                    filename = command[1]
-                    writedt = command[2]
-                    if ifcd == 1:
-                        f = open(workdir + "/" + filename, 'w')
-                        f.write(writedt + '\n')
-                        f.close()
-                        #print(writedt + ' ==> ' + workdir + "/" + filename)
+                if len(command) > 2:
+                    text_to_write = text.replace('wf ' + command[1] + ' ', '')
+                    if command[1][0] == "/":
+                        filename = command[1]
                     else:
-                        f = open(filename, 'w')
-                        f.write(writedt + '\n')
+                        filename = workdir + "/" + command[1]
+                    if os.path.exists(filename) == True:
+                        f = open(filename, 'r')
+                        old_text = f.read()
                         f.close()
-                        #print(writedt + ' ==> ' + filename)
-                except:
-                    print("Errno 2: No such file or directory")
+                        try:
+                            f = open(filename, 'w')
+                            f.write(old_text + "\n" + text_to_write)
+                            f.close()
+                        except:
+                            print("ERROR: Access denied or directory is't exists")
+                    else:
+                        try:
+                            f = open(filename, 'w')
+                            f.write(text_to_write)
+                            f.close()
+                        except:
+                            print("ERROR: Access denied or directory is't exists")
+                else:
+                    print("USAGE: wf [file] [text..]")
             elif text[0] == "!":
                 execute_text = text.replace('!', '')
                 os.system(execute_text)
