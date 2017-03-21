@@ -178,7 +178,7 @@ while True:
                     except:
                         print("Error")
             elif command[0] == "cd":
-                try:
+                if len(command) == 2:
                     if os.path.exists(command[1]):
                         if command[1] == "-":
                             ifcd = 0
@@ -188,8 +188,8 @@ while True:
                             #os.chdir(command[1])
                     else:
                         print("Error. Maybe, directory is not exists?")
-                except:
-                    print("Usage: cd [/path/to/directory]")
+                else:
+                    print("USAGE: cd [/path/to/directory]")
             elif command[0] == "dir" or command[0] == "ls":
                 try:
                     ls = os.listdir(command[1])
