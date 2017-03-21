@@ -261,22 +261,6 @@ while True:
                     print("USAGE: rf [path/to/file]")
             elif command[0] == "getlogin":
                 print(login)
-            elif command[0] == "iwf":
-                try:
-                    filename = command[1]
-                    writedt = input("Text: ")
-                    if ifcd == 1:
-                        f = open(workdir + "/" + filename, 'w')
-                        f.write(writedt + '\n')
-                        f.close()
-                        print(writedt + " >> " + workdir + "/" + filename)
-                    else:
-                        f = open(filename, 'w')
-                        f.write(writedt + '\n')
-                        f.close()
-                        print(writedt + " >> " + filename)
-                except:
-                    print("Errno 2: No such file or directory")
             elif command[0] == "mf":
                 if len(command) == 3:
                     if command[1][0] == "/":
