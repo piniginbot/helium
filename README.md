@@ -1,5 +1,6 @@
-# master
-## This is unstable branch
+# 21.03.17 Anniversary Version
+## This is stable version
+## Happy Birthday, Pinos!
 
 # pinos
 Pinos is not Operating System
