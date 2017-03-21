@@ -243,6 +243,7 @@ while True:
                         f = open(file_to_open, 'r')
                         readed = f.read()
                         print(readed)
+                        f.close()
                     except:
                         print("ERROR: File is't exists or access denied")
                 else:
