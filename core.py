@@ -12,7 +12,6 @@ import os
 import math
 import datetime
 import time
-import panic
 
 # === Variables ===
 global text
