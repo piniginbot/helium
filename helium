@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Hello! I'm Helium!"
+echo "Helium 0.1. License: ISC. Created by Funtazoid (Oleg Asimov). Based on Pinos 21.03.17 by MaksimPinigin."
+python3 /usr/bin/core.py
+exit && exit

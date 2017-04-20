@@ -12,7 +12,10 @@ import os
 import math
 import datetime
 import time
-
+import sys
+# === Import /bin ===
+sys.path.append(os.getcwd() + '//bin')
+import hello
 # === Variables ===
 global text
 global command
@@ -51,10 +54,7 @@ while True:
             command = text.split(' ') # SCS
 
             if command[0] == "hello":
-                if len(command) == 2:
-                    print("Hello, " + command[1] + "!")
-                else:
-                    print("Hello, World!")
+                hello.CommandExecution()
             elif command[0] == "md":
                 if len(command) == 2:
                     try:
