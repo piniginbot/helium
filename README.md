@@ -1,18 +1,13 @@
-# master
-## This is unstable branch
-
-# pinos
-Pinos is not Operating System
-
-# how to start
-\# - as root
-
-$ - as user
-## debian
-1. \# apt-get install python3
-2. $ python3 core.py
-
-## openbsd
-1. \# pkg_add python
-2. select python 3.5
-3. $ python3.5 core.py
+# Что это?
+Helium - модификация Pinos (Привет, MaksimPinigin!). Ее разработчик - Funtazoid.
+Не факт, что будет завершено, зависим от релизов Pinos.
+# Контакты
+YAStudio - подразделение NovoImpossible (снова привет, MaksimPinigin!).
+Funtazoid (Олег Азимов) - CEO YAStudio.
+# Как накатить?
+# Ubuntu, Debian, Mint:
+1. Ставим Python 3
+2. Клонируем ветку.
+3. (Будет дополнено)
+# Windows:
+1. (Будет дополнено)
