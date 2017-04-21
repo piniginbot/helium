@@ -5,9 +5,9 @@ Helium - модификация Pinos (Привет, MaksimPinigin!). Ее ра�
 YAStudio - подразделение NovoImpossible (снова привет, MaksimPinigin!).
 Funtazoid (Олег Азимов) - CEO YAStudio.
 # Как накатить?
-# Ubuntu, Debian, Mint:
+## Ubuntu, Debian, Mint:
 1. Ставим Python 3
 2. Клонируем ветку.
 3. (Будет дополнено)
-# Windows:
+## Windows:
 1. (Будет дополнено)
