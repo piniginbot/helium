@@ -20,6 +20,8 @@ import pinos
 import helium
 import mth
 import rd_core
+import md_core
+import ls_core
 # === Variables ===
 global text
 global command
@@ -61,13 +63,7 @@ while True:
                 hello.CommandExecution()
             elif command[0] == "md":
                 if len(command) == 2:
-                    try:
-                        if command[1][0] == "/":
-                            os.makedirs(command[1])
-                        else:
-                            os.makedirs(workdir + "/" + command[1])
-                    except:
-                        print("ERROR: Directory exists or access denied")
+                    md_core.CommandExecution(command[1])
                 else:
                     print("USAGE: md [path/to/directory]")
             elif command[0] == "rd":
@@ -148,25 +144,10 @@ while True:
                 else:
                     print("USAGE: cd [/path/to/directory]")
             elif command[0] == "dir" or command[0] == "ls":
-                try:
-                    ls = os.listdir(command[1])
-                    for row in ls:
-                        for elem in row:
-                            print(elem, end='')
-                        print()
-                except:
-                    try:
-                        ls = os.listdir(workdir)
-                        for row in ls:
-                            for elem in row:
-                                print(elem, end='')
-                            print()
-                    except:
-                        ls = os.listdir("/")
-                        for row in ls:
-                            for elem in row:
-                                print(elem, end='')
-                            print()
+                if len(command) > 1:
+                    ls_core.CommandExecution(command[1])
+                else:
+                    ls_core.AnotherCommandExecution()
             # Phew...
             #elif command[0] == "chmod":
             #    try:
