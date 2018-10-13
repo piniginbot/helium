@@ -1,0 +1,10 @@
+def CommandExecution():
+    print('')
+    print('88""Yb 88 88b 88  dP"Yb  .dP"Y8      dP"Yb')
+    print('88__dP 88 88Yb88 dP   Yb `Ybo."     dP   Yb')
+    print('88"""  88 88 Y88 Yb   dP o.`Y8b     Yb   dP')
+    print('88     88 88  Y8  YbodP  8bodP      YbodP')
+    print('')
+    print("Pinos 0 Pre-alpha 21.03.17")
+    print("Copyright (c) 2016-2017, Maksim Pinigin <maksim@pinig.in>")
+    print('')

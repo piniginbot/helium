@@ -16,6 +16,9 @@ import sys
 # === Import /bin ===
 sys.path.append(os.getcwd() + '//bin')
 import hello
+import pinos
+import helium
+import mth
 # === Variables ===
 global text
 global command
@@ -88,94 +91,60 @@ while True:
             elif command[0] == "python_commands":
                 help()
             elif command[0] == "pinos":
-                print('')
-                print('88""Yb 88 88b 88  dP"Yb  .dP"Y8      dP"Yb')
-                print('88__dP 88 88Yb88 dP   Yb `Ybo."     dP   Yb')
-                print('88"""  88 88 Y88 Yb   dP o.`Y8b     Yb   dP')
-                print('88     88 88  Y8  YbodP  8bodP      YbodP')
-                print('')
-                print("Pinos 0 Pre-alpha master")
-                print("Copyright (c) 2016-2017, Maksim Pinigin <maksim@pinig.in>")
-                print('')
+                pinos.CommandExecution()
+            elif command[0] == "helium":
+                helium.CommandExecution()
             elif command[0] == "array":
                 print(command[1:])
             #elif command[0] == "pfh":
             #...
             # === Official modules ===
-            elif command[0] == "omod":
+            #elif command[0] == "omod":
                 # === Math ===
-                try:
-                    if command[1] == "oldmath": # from 2016
-                        global primer
-                        print("Math for Pinos by Maxim Pinigin. License ISC")
-                        print("Copyright (c) 2016, Maksim Pinigin <maksim@pinig.in>")
-                        while True:
-                            primer = input("Math> ")
-                            if primer == "exit":
-                                break
-                            elif primer == "+":
-                                one = int(input("One: "))
-                                two = int(input("Two: "))
-                                otv = one+two
-                                print(otv)
-                            elif primer == "-":
-                                one = int(input("One: "))
-                                two = int(input("Two: "))
-                                otv = one-two
-                                print(otv)
-                            elif primer == "/":
-                                one = int(input("One: "))
-                                two = int(input("Two: "))
-                                otv = one/two
-                                print(otv)
-                            elif primer == "*":
-                                one = int(input("One: "))
-                                two = int(input("Two: "))
-                                otv = one*two
-                                print(otv)
-                            elif primer == "pi":
-                                print(math.pi)
-                            elif primer == "help":
-                                print("+ or - or / or * or pi")
-                            else:
-                                print("Unknown command")
+            #    try:
+            #        if command[1] == "oldmath": # from 2016
+            #            global primer
+            #            print("Math for Pinos by Maxim Pinigin. License ISC")
+            #            print("Copyright (c) 2016, Maksim Pinigin <maksim@pinig.in>")
+            #            while True:
+            #                primer = input("Math> ")
+            #                if primer == "exit":
+            #                    break
+            #                elif primer == "+":
+            #                    one = int(input("One: "))
+            #                    two = int(input("Two: "))
+            #                    otv = one+two
+            #                    print(otv)
+            #                elif primer == "-":
+             #                   one = int(input("One: "))
+              #                  two = int(input("Two: "))
+               #                 otv = one-two
+                #                print(otv)
+                 #           elif primer == "/":
+                  #              one = int(input("One: "))
+                   #             two = int(input("Two: "))
+                    #            otv = one/two
+                     #           print(otv)
+                      #      elif primer == "*":
+                       #         one = int(input("One: "))
+                        #        two = int(input("Two: "))
+                         #       otv = one*two
+                          #      print(otv)
+                           # elif primer == "pi":
+                            #    print(math.pi)
+                            #elif primer == "help":
+                            #    print("+ or - or / or * or pi")
+                            #else:
+                             #   print("Unknown command")
                     # ===
                     # ===
-                    else:
-                        print("Module is not found.")
-                except:
-                    print("Error!")
+                    #else:
+                    #    print("Module is not found.")
+                #except:
+                #    print("Error!")
             # ===
             elif command[0] == "math":
-                print("Math for Pinos by Maxim Pinigin.")
-                while True:
-                    textmath = input("Math> ")
-                    commandmath = textmath.split(' ')
-                    if commandmath[0] == "exit":
-                        break
-                    try:
-                        if commandmath[1] == "+":
-                            one = int(commandmath[0])
-                            two = int(commandmath[2])
-                            otv = one+two
-                            print(otv)
-                        elif commandmath[1] == "-":
-                            one = int(commandmath[0])
-                            two = int(commandmath[2])
-                            otv = one-two
-                            print(otv)
-                        elif commandmath[1] == "/":
-                            one = int(commandmath[0])
-                            two = int(commandmath[2])
-                            otv = one/two
-                            print(otv)
-                        elif commandmath[1] == "*":
-                            one = int(commandmath[0])
-                            two = int(commandmath[2])
-                            otv = one*two
-                            print(otv)
-                    except:
-                        print("Error")
+                mth.CommandExecution()
             elif command[0] == "cd":
                 if len(command) == 2:
                     if os.path.exists(command[1]):
