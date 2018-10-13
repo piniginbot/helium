@@ -7,5 +7,5 @@ def CommandExecution():
     print("|_| |_|\___|_|_|\__,_|_| |_| |_|")
     print('')
     print('helium based on Pinos 0 21.03.17')
-    print('Copyright (c) 2016-2018, Maksim Pinigin <maksim@pinig.in>')
+    print('Copyright (c) 2016-2017, Maksim Pinigin <maksim@pinig.in>')
     print('Copyright (c) 2017-2018, Oleg Asimov <at@funtazoid.pw>')
