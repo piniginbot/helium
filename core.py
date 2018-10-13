@@ -19,6 +19,7 @@ import hello
 import pinos
 import helium
 import mth
+import rd_core
 # === Variables ===
 global text
 global command
@@ -66,24 +67,12 @@ while True:
                         else:
                             os.makedirs(workdir + "/" + command[1])
                     except:
-                        print("ERROR: Direcotry exists or access denied")
+                        print("ERROR: Directory exists or access denied")
                 else:
                     print("USAGE: md [path/to/directory]")
             elif command[0] == "rd":
                 if len(command) == 2:
-                    try:
-                        if command[1][0] == "/":
-                            if os.path.exists(command[1]) == True:
-                                os.rmdir(command[1])
-                            else:
-                                print("ERROR: Directory is't exists or access denied")
-                        else:
-                            if os.path.exists(workdir + "/" + command[1]) == True:
-                                os.rmdir(workdir + "/" + command[1])
-                            else:
-                                print("ERROR: Directory is't exists or access denied")
-                    except:
-                        print("ERROR: Directory is't empty")
+                    rd_core.CommandExecution(command[1])
                 else:
                     print("USAGE: rd [path/to/directory]")
             elif command[0] == "python":
